@@ -1,6 +1,6 @@
-var DB = require('../modules/db');
+var bookshelf = require('../modules/bookshelf');
 
-var Users = DB.Model.extend({
+var Users = bookshelf.Model.extend({
    tableName: 'users',
    idAttribute: 'user_id'
 });

@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var restrict = require('../modules/restrict');
+var isAuthenticated = require('../modules/isAuthenticated');
 
-router.get('/', restrict, function (req, res, next) {
-    res.render('index', {title: 'qwe'});
+router.get('/', isAuthenticated, function (req, res, next) {
+    res.render('index', {title: 'Index'});
 });
 
 module.exports = router;

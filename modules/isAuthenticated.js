@@ -1,4 +1,4 @@
-module.exports = function restrict(req, res, next) {
+module.exports = function isAuthenticated(req, res, next) {
     if (!req.isAuthenticated()){
         return res.redirect('/users/login');
     }
