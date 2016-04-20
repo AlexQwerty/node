@@ -16,8 +16,8 @@
             s.onmessage = function (e) {
                 console.log("got: " + e.data);
             }
-            document.getElementById('map').addEventListener('click', function(event){
-                s.send(JSON.stringify({"id": 1, "ert": 456}));
+            document.getElementById('map').addEventListener('click', function(e){
+                s.send(JSON.stringify({x: e.clientX, y: e.clientY}));
             });
         </script>
 <%- include('footer') %>
